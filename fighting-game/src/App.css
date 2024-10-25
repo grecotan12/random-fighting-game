@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.fight-stand {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  animation: fighting 0.5s ease 0.5s infinite;
+}
+
+@keyframes fighting {
+  0% { content:url('./fighting/attack.png') }
+  20% { content:url('./fighting/attack2.png') }
+  40% { content:url('./fighting/attack3.png') }
+  60% { content:url('./fighting/attack4.png') }
+  80% { content:url('./fighting/attack5.png') }
+  100% {content:url('./fighting/attack6.png') }
+}
+
+.idle-stand {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  animation: standing 0.5s ease 0.5s infinite;
+}
+
+@keyframes standing {
+  0% { content:url('./idle/Idle.png'); }
+  25% { content:url('./idle/Idle1.png'); }
+  50% { content:url('./idle/Idle2.png'); }
+  100% { content:url('./idle/Idle3.png'); }
+}
