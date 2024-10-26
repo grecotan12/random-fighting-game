@@ -2,11 +2,52 @@
   text-align: center;
 }
 
+#menu {
+  height: 100vh;
+  background-image: url('./background/Preview\ 1.png');
+  background-size: cover;
+  resize: both;
+  overflow: scroll; 
+}
+
+#skill {
+  width: 200px;
+  height: 200px;
+  margin-top: 18%;
+}
+
+#screen-one {
+  display: none;
+}
+
+.character-container {
+  float: left;
+  margin-top: 7%;
+}
+
+.skill-one {
+  width: 0;
+  height: 0;
+  object-fit: cover;
+  animation: skill 0.5s ease-in-out 0.5s 2;
+}
+
+@keyframes skill {
+  0% { content:url('./skills/skill_1.png') }
+  15% { content:url('./skills/skill_2.png')  }
+  30% { content:url('./skills/skill_3.png')  }
+  45% { content:url('./skills/skill_4.png')  }
+  60% { content:url('./skills/skill_5.png')  }
+  75% { content:url('./skills/skill_6.png')  }
+  90% { content:url('./skills/skill_7.png')  }
+  100% { content:url('./skills/skill_8.png')  }
+}
+
 .fight-stand {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  animation: fighting 0.5s ease 0.5s infinite;
+  animation: fighting 0.5s ease-in-out 0.5s 2;
 }
 
 @keyframes fighting {
@@ -30,4 +71,15 @@
   25% { content:url('./idle/Idle1.png'); }
   50% { content:url('./idle/Idle2.png'); }
   100% { content:url('./idle/Idle3.png'); }
+}
+
+#container-button {
+  display: inline-block;
+  width: 100px;
+  height: auto;
+}
+
+.style-button {
+  margin-top: 5px;
+  width: 100px;
 }
