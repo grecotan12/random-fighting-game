@@ -12,7 +12,7 @@ class App extends React.Component{
       status: 'idle-stand',
     };
     this.attack = this.attack.bind(this);
-    this.changeScreen = this.changeScreen.bind(this);
+    this.gameScreen = this.gameScreen.bind(this);
   }
 
   attack() {
@@ -24,18 +24,24 @@ class App extends React.Component{
     }, 1400);
   }
 
-  changeScreen() {
+  gameScreen() {
     document.getElementById("screen-one").style.display = "block";
     document.getElementById("menu").style.display = "none";
+  }
+
+  menuScreen() {
+    document.getElementById("screen-one").style.display = "none";
+    document.getElementById("menu").style.display = "block";
   }
 
   render() {
     return (
       <div className="App">
         <div id="menu">
-          <button onClick={this.changeScreen}>Play</button>
+          <button className="play-btn btn btn-primary btn-lg" onClick={this.gameScreen}>Play</button>
         </div>
         <div id="screen-one">
+          <button className="play-btn btn btn-primary btn-lg" onClick={this.menuScreen}>Play</button>
           <h1>Animation</h1>
           <div className='character-container'>
             <div id="container-button">
