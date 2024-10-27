@@ -9,7 +9,6 @@
   font-size: 2rem;
 }
 
-
 .play-btn, .instruction-btn {
   width: 180px;
   height: 50px;
@@ -38,7 +37,7 @@
   justify-content: center;
   height: 100vh;
   background-image: url('./background/Preview\ 1.png');
-  background-size: cover;
+  background-size: contain;
   resize: both;
 }
 
@@ -55,15 +54,22 @@
 .screen-one-background {
   height: 100vh;
   background-image: url('./background/origbig.png');
-  background-size: cover;
+  background-size: contain;
   resize: both;
 }
 
 .character-container {
   float: left;
-  margin-top: 28%;
+  margin-top: 12%;
   margin-left: 25%;
 }
+
+@media screen and (min-height: 1080px) {
+  .character-container {
+    margin-top: 25%;
+  }
+}
+
 
 .skill-one {
   width: 0;
